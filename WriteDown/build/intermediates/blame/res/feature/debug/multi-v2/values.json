@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/build/intermediates/incremental/mergeDebugFeatureResources/merged.dir/values/values.xml",
+            "map": [
+                {
+                    "source": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/res/values/dimens.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "41",
+                        "endOffsets": "53"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "41",
+                        "endOffsets": "92"
+                    }
+                },
+                {
+                    "source": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "52",
+                        "endOffsets": "64"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "97",
+                        "endColumns": "52",
+                        "endOffsets": "145"
+                    }
+                }
+            ]
+        }
+    ]
+}

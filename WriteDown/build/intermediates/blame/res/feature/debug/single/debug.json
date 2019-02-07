@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/build/intermediates/res/merged/feature/debug/layout_register.xml.flat",
+        "source": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/res/layout/register.xml"
+    },
+    {
+        "merged": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/build/intermediates/res/merged/feature/debug/layout_user.xml.flat",
+        "source": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/res/layout/user.xml"
+    },
+    {
+        "merged": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/build/intermediates/res/merged/feature/debug/layout_login.xml.flat",
+        "source": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/res/layout/login.xml"
+    },
+    {
+        "merged": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/build/intermediates/res/merged/feature/debug/layout_history.xml.flat",
+        "source": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/res/layout/history.xml"
+    },
+    {
+        "merged": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/build/intermediates/res/merged/feature/debug/layout_content_write_down.xml.flat",
+        "source": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/res/layout/content_write_down.xml"
+    },
+    {
+        "merged": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/build/intermediates/res/merged/feature/debug/layout_activity_write_down.xml.flat",
+        "source": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/res/layout/activity_write_down.xml"
+    },
+    {
+        "merged": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/build/intermediates/res/merged/feature/debug/layout_resetpwd.xml.flat",
+        "source": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/res/layout/resetpwd.xml"
+    },
+    {
+        "merged": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/build/intermediates/res/merged/feature/debug/layout_note.xml.flat",
+        "source": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/res/layout/note.xml"
+    },
+    {
+        "merged": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/build/intermediates/res/merged/feature/debug/menu_menu_write_down.xml.flat",
+        "source": "/Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/res/menu/menu_write_down.xml"
+    }
+]

@@ -1,0 +1,57 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:2:1-18:12
+	package
+		ADDED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:3:11-63
+		INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml
+		INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml
+		ADDED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:2:1-18:12
+		INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml
+		ADDED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:2:1-18:12
+		INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:5:5-16:19
+activity#com.example.yanglinghu.writedown.WriteDown.WriteDown
+ADDED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:6:9-15:20
+	android:label
+		ADDED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:8:17-49
+	android:theme
+		ADDED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:9:17-60
+	android:name
+		ADDED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:7:17-42
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:10:13-14:29
+action#android.intent.action.MAIN
+ADDED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:11:17-68
+	android:name
+		ADDED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:11:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:13:17-76
+	android:name
+		ADDED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml:13:27-74
+uses-sdk
+INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml
+INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml
+INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml
+INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml
+		ADDED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml
+		INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml
+		ADDED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml
+		INJECTED from /Users/yanglinghu/AndroidStudioProjects/WriteDown/WriteDown/src/main/AndroidManifest.xml
