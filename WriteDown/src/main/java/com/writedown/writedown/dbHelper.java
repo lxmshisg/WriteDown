@@ -5,6 +5,10 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.support.design.widget.TabLayout;
+import android.util.Log;
+
+import static android.content.ContentValues.TAG;
 
 public class dbHelper extends SQLiteOpenHelper {
 
@@ -25,38 +29,55 @@ public class dbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE account_table (Uuid INTEGER PRIMARY KEY AUTOINCREMENT,Username TEXT UNIQUE,Password TEXT ,Type INTEGER ,Message REAL) ");
+        db.execSQL("CREATE TABLE account_table (Uuid INTEGER PRIMARY KEY AUTOINCREMENT,Username TEXT UNIQUE,Password TEXT ,Type INTEGER ,Message BLOB) ");
 
     }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL(" DROP TABLE IF EXISTS "+ TABLE_NAME );
+        db.execSQL(" DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
 
-    public long addUser(String user,String password){
+    public long addUser(String user, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("Username",user);
-        contentValues.put("Password",password);
-        long res = db.insert("account_table",null,contentValues);
+        contentValues.put("Username", user);
+        contentValues.put("Password", password);
+        long res = db.insert("account_table", null, contentValues);
         db.close();
-        return  res;
+        return res;
     }
-    public boolean checkUser(String username,String password){
+
+    public boolean checkUser(String username, String password) {
         String[] columns = {COL_1};
         SQLiteDatabase db = getReadableDatabase();
-        String selection = COL_2 + "=?" + "and" + COl_3+ "=?";
-        String[] selectionArgs = { username,password };
-        Cursor cursor = db.query(TABLE_NAME,columns,selection,selectionArgs,null,null,null);
+        String selection = COL_2 + "=?" + " and " + COl_3 + "=?";
+        String[] selectionArgs = {username, password};
+        Cursor cursor = db.query(TABLE_NAME, columns, selection, selectionArgs, null, null, null);
         int count = cursor.getCount();
         cursor.close();
         db.close();
 
-        if(count>0)
+        if (count > 0)
             return true;
         else
             return false;
     }
 
+    public boolean addData(String item) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL_5, item);
+
+        Log.d(TAG, "addData: Adding " + item + "to" + TABLE_NAME);
+        long result = db.insert(TABLE_NAME, null, contentValues);
+        if (result == -1) {
+            return false;
+        } else {
+            return true;
+
+        }
+
+    }
 }

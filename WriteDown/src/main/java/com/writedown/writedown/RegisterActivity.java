@@ -41,22 +41,32 @@ public class RegisterActivity extends AppCompatActivity {
                 String pwd = mTextPassword.getText().toString().trim();
                 String re_pwd = mTextrepassword.getText().toString().trim();
 
-                if (pwd.equals(re_pwd)) {
-                    long val = db.addUser(user, pwd);
-                    if (val > 0) {
-                        Toast.makeText(RegisterActivity.this, "Welcome", Toast.LENGTH_SHORT).show();
-                        Intent moveToLogin = new Intent(RegisterActivity.this, LoginActivity.class);
-                        startActivity(moveToLogin);
-                    } else {
-                        Toast.makeText(RegisterActivity.this, "Account exists", Toast.LENGTH_SHORT).show();
 
+                    if (!(user.length() >= 6 && user.length() <= 10)) {
+                        Toast.makeText(RegisterActivity.this, "Username must at least 6 characters", Toast.LENGTH_SHORT).show();
+                        return;
                     }
-                }
-                else {
-                    Toast.makeText(RegisterActivity.this, "Password is not matching", Toast.LENGTH_SHORT).show();
+                    if (!(pwd.length() > 0 && re_pwd.length() > 0)) {
+                        Toast.makeText(RegisterActivity.this, "Please enter the password", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    if (!re_pwd.equals(pwd)) {
+                        Toast.makeText(RegisterActivity.this, "Two passwords are not matching", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                if (pwd.equals(re_pwd)) {
+                    db.addUser(user, pwd);
+                    Toast.makeText(RegisterActivity.this, "Welcome", Toast.LENGTH_SHORT).show();
+                    Intent moveToLogin = new Intent(RegisterActivity.this, LoginActivity.class);
+                    startActivity(moveToLogin);
+                } else {
+                    Toast.makeText(RegisterActivity.this, "Account exists", Toast.LENGTH_SHORT).show();
 
                 }
+
             }
+
+
         });
 
     }

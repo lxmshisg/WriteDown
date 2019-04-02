@@ -10,8 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
-    EditText mTextUsername;
-    EditText mTextPassword;
+    EditText mTextUsernameL;
+    EditText mTextPasswordL;
     Button   mButtonLogin;
     TextView getViewRegister;
     dbHelper db;
@@ -23,8 +23,8 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         db = new dbHelper(this);
-        mTextUsername = (EditText) findViewById(R.id.login_account);
-        mTextPassword = (EditText) findViewById(R.id.login_password);
+        mTextUsernameL = (EditText) findViewById(R.id.login_accountL);
+        mTextPasswordL = (EditText) findViewById(R.id.login_passwordL);
         mButtonLogin = (Button) findViewById(R.id.login_btn);
         getViewRegister = (TextView) findViewById(R.id.register);
         getViewRegister.setOnClickListener(new View.OnClickListener() {
@@ -38,14 +38,23 @@ public class LoginActivity extends AppCompatActivity {
         mButtonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String user = mTextUsername.getText().toString().trim();
-                String pwd = mTextPassword.getText().toString().trim();
+                String user = mTextUsernameL.getText().toString().trim();
+                String pwd = mTextPasswordL.getText().toString().trim();
                 boolean res = db.checkUser(user, pwd);
+
+                if(!(user.length()>=6&&user.length()<=10)) {
+                    Toast.makeText(LoginActivity.this, "Enter the username", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(!(pwd.length()>0)) {
+                    Toast.makeText(LoginActivity.this, "Enter the password", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 if (res == true) {
-                    Intent moveToHistory = new Intent(LoginActivity.this, HistoryActivity.class);
-                    startActivity(moveToHistory);
+                    Intent moveToMain = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(moveToMain);
                 } else {
-                    Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Username or Password is not correct", Toast.LENGTH_SHORT).show();
                 }
             }
         });
