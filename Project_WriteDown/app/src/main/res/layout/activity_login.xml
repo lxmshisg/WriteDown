@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp" />
+
+
+    <EditText
+        android:id="@+id/login_accountL"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:hint="Username(Email)"
+        android:paddingLeft="5dp"
+        android:singleLine="true" />
+
+
+    <EditText
+        android:id="@+id/login_passwordL"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="5dp"
+        android:singleLine="true" />
+
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Login"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Not_register?" />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/register"
+        android:textColor="@color/colorAccent" />
+
+</LinearLayout>
