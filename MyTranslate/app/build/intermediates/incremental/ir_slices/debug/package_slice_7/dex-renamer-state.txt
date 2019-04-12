@@ -1,0 +1,4 @@
+#Thu Apr 11 22:13:04 EDT 2019
+base.0=C\:\\Users\\Jiang Yiheng\\Desktop\\MyTranslate\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\7
+path.0=classes.dex
+renamed.0=classes.dex
