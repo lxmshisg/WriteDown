@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Jiang Yiheng\\Desktop\\MyTranslate\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "/Users/Michael/Documents/GitHub/WriteDown/MyTranslate/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Jiang Yiheng\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\2c178af5b12be89d315785f033387abc\\res\\values-v24\\values-v24.xml",
+                    "source": "/Users/Michael/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/0f590320a6d56b9e98d269241a771e52/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Jiang Yiheng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\03e9279a17adfe7e272d51a486b3d10e\\res\\values-v24\\values-v24.xml",
+                    "source": "/Users/Michael/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/1e244fd7aa70a55f42f23fa9cd41622f/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

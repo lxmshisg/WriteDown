@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Jiang Yiheng\\Desktop\\MyTranslate\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+            "outputFile": "/Users/Michael/Documents/GitHub/WriteDown/MyTranslate/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw720dp-v13/values-sw720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Jiang Yiheng\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-27.1.1.aar\\067b62a5eb3228e4b5ca8542b9f087cc\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "source": "/Users/Michael/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-27.1.1.aar/61d136e5a5e263f1996c91e5e96ff7be/res/values-sw720dp-v13/values-sw720dp-v13.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

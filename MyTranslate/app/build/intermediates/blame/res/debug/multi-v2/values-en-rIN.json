@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Jiang Yiheng\\Desktop\\MyTranslate\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rIN\\values-en-rIN.xml",
+            "outputFile": "/Users/Michael/Documents/GitHub/WriteDown/MyTranslate/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Jiang Yiheng\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-wallet-12.0.1.aar\\80d6b3304872a4a906628088122421a3\\res\\values-en-rIN\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "206",
-                        "endColumns": "99",
-                        "endOffsets": "305"
-                    },
-                    "to": {
-                        "startLines": "42",
-                        "startColumns": "4",
-                        "startOffsets": "4022",
-                        "endColumns": "103",
-                        "endOffsets": "4121"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Jiang Yiheng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\03e9279a17adfe7e272d51a486b3d10e\\res\\values-en-rIN\\values-en-rIN.xml",
+                    "source": "/Users/Michael/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/1e244fd7aa70a55f42f23fa9cd41622f/res/values-en-rIN/values-en-rIN.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Jiang Yiheng\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\f770fe79afbef36ddf1af5f5445818be\\res\\values-en-rIN\\values-en-rIN.xml",
+                    "source": "/Users/Michael/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/f696c5f42117997908e860b134149677/res/values-en-rIN/values-en-rIN.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -55,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Jiang Yiheng\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-27.1.1.aar\\067b62a5eb3228e4b5ca8542b9f087cc\\res\\values-en-rIN\\values-en-rIN.xml",
+                    "source": "/Users/Michael/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-27.1.1.aar/61d136e5a5e263f1996c91e5e96ff7be/res/values-en-rIN/values-en-rIN.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -69,6 +52,23 @@
                         "startOffsets": "1825,1925,2031,2139,2250,2345,2427,2519,2621,2717,2813,2907,2999,3107,3215,3299,3380,3461,3559,3659,3745",
                         "endColumns": "99,105,107,110,94,81,91,101,95,95,93,91,107,107,83,80,80,97,99,85,93",
                         "endOffsets": "1920,2026,2134,2245,2340,2422,2514,2616,2712,2808,2902,2994,3102,3210,3294,3375,3456,3554,3654,3740,3834"
+                    }
+                },
+                {
+                    "source": "/Users/Michael/.gradle/caches/transforms-1/files-1.1/play-services-wallet-12.0.1.aar/af82b8efa44c86dfb57ff128ca422dd8/res/values-en-rIN/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "206",
+                        "endColumns": "99",
+                        "endOffsets": "305"
+                    },
+                    "to": {
+                        "startLines": "42",
+                        "startColumns": "4",
+                        "startOffsets": "4022",
+                        "endColumns": "103",
+                        "endOffsets": "4121"
                     }
                 }
             ]

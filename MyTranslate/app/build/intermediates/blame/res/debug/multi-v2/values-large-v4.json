@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Jiang Yiheng\\Desktop\\MyTranslate\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
+            "outputFile": "/Users/Michael/Documents/GitHub/WriteDown/MyTranslate/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Jiang Yiheng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\03e9279a17adfe7e272d51a486b3d10e\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "/Users/Michael/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/1e244fd7aa70a55f42f23fa9cd41622f/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

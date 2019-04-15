@@ -1,7 +1,7 @@
-#Thu Apr 11 22:12:58 EDT 2019
-base.0=C\:\\Users\\Jiang Yiheng\\Desktop\\MyTranslate\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+#Sat Apr 13 16:45:19 EDT 2019
+base.0=/Users/Michael/Documents/GitHub/WriteDown/MyTranslate/app/build/intermediates/transforms/dexMerger/debug/10
 path.1=classes2.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=C\:\\Users\\Jiang Yiheng\\Desktop\\MyTranslate\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+base.1=/Users/Michael/Documents/GitHub/WriteDown/MyTranslate/app/build/intermediates/transforms/dexMerger/debug/10
