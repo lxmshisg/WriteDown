@@ -33,21 +33,21 @@ public class MD5 {
 
         try {
             // Get an MD5 converter
-            MessageDigest messageDigest = MessageDigest.getInstance("MD5");
+            MessageDigest md5 = MessageDigest.getInstance("MD5");
             // Convert the input string to a byte array
-            byte[] inputByteArray = null;
+            byte[] inputbytearray = null;
 			try {
-				inputByteArray = input.getBytes("utf-8");
+				inputbytearray = input.getBytes("utf-8");
 			} catch (UnsupportedEncodingException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-            // inputByteArray is an array of bytes from the input string conversion
-            messageDigest.update(inputByteArray);
+            // inputbytearray is an array of bytes from the input string conversion
+            md5.update(inputbytearray);
             // Convert and return the result, also a byte array containing 16 elements
-            byte[] resultByteArray = messageDigest.digest();
+            byte[] resultByteArray = md5.digest();
             // Convert character array to string return
-            return byteArrayToHex(resultByteArray);
+            return ByteArrayToHex(resultByteArray);
         } catch (NoSuchAlgorithmException e) {
             return null;
         }
@@ -86,17 +86,17 @@ public class MD5 {
     public static String md5(InputStream in) {
 
         try {
-            MessageDigest messagedigest = MessageDigest.getInstance("MD5");
+            MessageDigest md5 = MessageDigest.getInstance("MD5");
 
             byte[] buffer = new byte[1024];
             int read = 0;
             while ((read = in.read(buffer)) != -1) {
-                messagedigest.update(buffer, 0, read);
+                md5.update(buffer, 0, read);
             }
 
             in.close();
 
-            String result = byteArrayToHex(messagedigest.digest());
+            String result = ByteArrayToHex(md5.digest());
 
             return result;
         } catch (NoSuchAlgorithmException e) {
@@ -110,7 +110,7 @@ public class MD5 {
         return null;
     }
 
-    private static String byteArrayToHex(byte[] byteArray) {
+    private static String ByteArrayToHex(byte[] byteArray) {
         // New a character array, this is used to form the result string（解释一下：一个byte是八位二进制，也就是2位十六进制字符（2的8次方等于16的2次方））
         char[] resultCharArray = new char[byteArray.length * 2];
         // Traversing a byte array, passing a bitwise operation , converting it into a character array

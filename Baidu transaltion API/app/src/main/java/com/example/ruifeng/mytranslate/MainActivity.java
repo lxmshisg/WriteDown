@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.ruifeng.mytranslate.BaiduTranslate.TransApi;
+import com.example.ruifeng.mytranslate.BaiduTranslate.TranslationAPI;
 import com.example.ruifeng.mytranslate.BaiduTranslate.TranslateResult;
 import com.google.gson.Gson;
 
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        String resultJson = new TransApi().getTransResult(query, "auto", "zh");
+                        String resultJson = new TranslationAPI().getTransResult(query, "auto", "zh");
                         //get result and analyze the result
                         Gson gson = new Gson();
                         TranslateResult translateResult = gson.fromJson(resultJson, TranslateResult.class);
