@@ -56,6 +56,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                 }if(user.equals("123321")&&pwd.equals("123321")) {
                     Toast.makeText(RegisterActivity.this, "Account exists", Toast.LENGTH_SHORT).show();
+                    return;
                 }
                 if(rs == false){
                     db.addUser(user, pwd);
