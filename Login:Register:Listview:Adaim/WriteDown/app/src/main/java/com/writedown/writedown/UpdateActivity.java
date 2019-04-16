@@ -33,6 +33,11 @@ public class UpdateActivity extends AppCompatActivity {
             public void onClick(View v) {
                 boolean isChange = db.ChangePWD(usernameU.getText().toString(),
                         userpasswordU.getText().toString());
+                 boolean rs =db.checkUserR(usernameU.getText().toString());
+                if(rs == false){
+                    Toast.makeText(UpdateActivity.this, "Account does not exists!", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 if (isChange == true)
                     if (isChange == true)
                         Toast.makeText(UpdateActivity.this, "Password Changed", Toast.LENGTH_LONG).show();
