@@ -42,7 +42,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String re_pwd = mTextrepassword.getText().toString().trim();
                 boolean rs = db.checkUserR(user);
 
-                if (!(user.length() >= 6 && user.length() <= 20)) {
+                if (!(user.length() >= 6 && user.length() <= 10)) {
                     Toast.makeText(RegisterActivity.this, "Username must at least 6 characters", Toast.LENGTH_SHORT).show();
                     return;
                 }
