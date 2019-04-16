@@ -44,10 +44,10 @@ public class LoginActivity extends AppCompatActivity {
 
                 boolean res = db.checkUser(user, pwd);
                 boolean rs =db.checkUserB(user,type);
-                if (rs == false){
+                /*if (rs == false){
                     Toast.makeText(LoginActivity.this, "The account is locked", Toast.LENGTH_SHORT).show();
                     return;
-                }
+                }*/
 
                 if(!(user.length()>=6&&user.length()<=10)) {
                     Toast.makeText(LoginActivity.this, "Username should not less than 6", Toast.LENGTH_SHORT).show();
