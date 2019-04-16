@@ -104,7 +104,6 @@ public class WritingTable extends AppCompatActivity {
                     float stopY = event.getY();
                     paint.setStrokeWidth(radio);
                     // 使用二阶贝塞尔曲线连接前后的点，添加到path中，这样的目的是让快速移动的时候的直线更圆滑
-                    // 关于二阶贝塞尔曲线的作用和原理可以上网查
                     singlePath.quadTo(preX, preY, stopX, stopY);
                     //根据两点坐标，绘制连线
                     //canvas.drawLine(startX, startY, stopX, stopY, paint);
@@ -129,7 +128,7 @@ public class WritingTable extends AppCompatActivity {
                     lines.add(new Path(singlePath));
                     // 当有笔画的时候将按钮设置为可点击
                     if(lines.size()>0) {
-                        btn_undo.setEnabled(true);
+                    btn_undo.setEnabled(true);
                     }
                     singlePath.reset();
                     break;
@@ -206,26 +205,30 @@ public class WritingTable extends AppCompatActivity {
             }
         }).start();
         }
-    /**
-     * 保存图片到SD卡上
-     */
 
+    // 保存图片到SD卡上
     protected void saveBitmap() {
         try {
-            // 保存图片到SD卡上
 
+            //清除缓存
             result.destroyDrawingCache();
+            //设置控件允许绘制缓存
             result.setDrawingCacheEnabled(true);
+            //获得控件的绘制缓存，快照
             Bitmap bp = result.getDrawingCache();
+            //获得图像
             Bitmap cache = Bitmap.createBitmap(bp);//复制bp
+            //清空画图缓冲区
             result.setDrawingCacheEnabled(false);//销毁bp
 
             Bitmap b2 = newBitmap(500, baseBitmap, cache);
             File dir = new File("/sdcard/writedown");
+            //sd卡里建立文件夹
             if(!dir.exists()) dir.mkdirs();
             String fileName = dir.getAbsolutePath()+"/"+filename;
             File file = new File(fileName);
             FileOutputStream stream = new FileOutputStream(file);
+            //保存截取的快照
             b2.compress(Bitmap.CompressFormat.JPEG, 100, stream);
             Toast.makeText(WritingTable.this, "保存图片成功", Toast.LENGTH_SHORT).show();
                // Android设备Gallery应用只会在启动的时候扫描系统文件夹
@@ -248,11 +251,12 @@ public class WritingTable extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+    //截图合并
     public static Bitmap newBitmap(int width, Bitmap bit1, Bitmap bit2) {
         if (width <= 0) {
             return null;
         }
-
+        //获得高度和宽度
         int h1 =  bit1.getHeight() * width / bit1.getWidth();
         int h2 = bit2.getHeight() * width / bit2.getWidth();
         int height = h1 + h2; //缩放到屏幕宽度时候 合成后的总高度
@@ -271,6 +275,7 @@ public class WritingTable extends AppCompatActivity {
     }
 
     public static Bitmap getNewSizeBitmap(Bitmap bitmap, int newWidth, int newHeight) {
+
         float scaleWidth = ((float) newWidth) / bitmap.getWidth();
         float scaleHeight = ((float) newHeight) / bitmap.getHeight();
         // 取得想要缩放的matrix参数

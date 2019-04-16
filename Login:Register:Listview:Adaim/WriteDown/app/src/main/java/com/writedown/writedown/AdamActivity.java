@@ -49,6 +49,7 @@ public class AdamActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent moveToLogin = new Intent(AdamActivity.this, LoginActivity.class);
                 startActivity(moveToLogin);
+                System.exit(0);
             }
         });
         mButtonhis.setOnClickListener(new View.OnClickListener() {

@@ -139,6 +139,29 @@ public class dbHelper extends SQLiteOpenHelper {
         cv.put(COL_5, item);//图片转为二进制
         db.insert(TABLE_NAME, null, cv);
         db.close();
+    }public boolean ChangePWD(String user, String pwd) {
+        SQLiteDatabase db= this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL_2,user);
+        contentValues.put(COl_3,pwd);
+        db.update(TABLE_NAME, contentValues, "Username = ?",new String[] { user });
+        return true;
+    }    
+    public boolean checkUserB(String username, String type) {
+        String[] columns = {COL_1};
+        SQLiteDatabase db = getReadableDatabase();
+        String selection = COL_2 + "=?" + " and " + COL_4 + "=?";
+        String[] selectionArgs = {username,type};
+        Cursor cursor = db.query(TABLE_NAME, columns, selection, selectionArgs, null, null, null);
+        int count = cursor.getCount();
+        cursor.close();
+        db.close();
+        if (type.equals(1))
+            return false;
+
+        else
+            return false;
+
     }
 
 

@@ -1,7 +1,10 @@
 package com.writedown.writedown;
 
+import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
@@ -20,11 +23,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    ArrayList<String> n;
+    ListView list;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,13 +38,21 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        username = getSharedPreferences("username", MODE_PRIVATE).getString("username", "unknown");
+        list = findViewById(R.id.list);
 
-
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int postion, long l) {
+                //Toast.makeText(ListVideoActivity.this, "You choose:"+"/sdcard/rasp/video/"+n.get(postion), Toast.LENGTH_SHORT).show();
+                openFile(MainActivity.this, "/sdcard/writedown/"+n.get(postion));
+            }
+        });
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent moveToWrite = new Intent(MainActivity.this, WriteActivity.class);
+                Intent moveToWrite = new Intent(MainActivity.this, WritingTable.class);
                 startActivity(moveToWrite);
             }
         });
@@ -53,9 +67,43 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        n = new ArrayList<>();
+        File dir2 = new File("/sdcard/writedown");
+        if(dir2.exists()) {
+            File[] s = dir2.listFiles();
+            for(int i=0; i<s.length; i++) {
+                try {
+                    String[] time = s[i].getName().split("-");
+                    if(time.length==2&&time[0].equals(username)) {
+                        n.add(s[i].getName());
+                    }
+                } catch (Exception e){
+                    e.printStackTrace();
+                    continue;
+                }
+            }
         }
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, n);
+        list.setAdapter(adapter);
+    }
 
+    public static void openFile(Context context, String file) {
+        try {
+            Intent intent = new Intent();
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.setAction(Intent.ACTION_VIEW);
+            intent.setDataAndType(Uri.fromFile(new File(file)), "image/jpeg");
+            context.startActivity(intent);
+            Intent.createChooser(intent, "请选择软件显示");
+        } catch (ActivityNotFoundException e) {
+            Toast.makeText(context, "没有可以打开图片的软件，请先下载", Toast.LENGTH_SHORT).show();
+        }
+    }
 
     @Override
     public void onBackPressed() {
@@ -73,7 +121,6 @@ public class MainActivity extends AppCompatActivity
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -83,6 +130,8 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent moveToaccount = new Intent(MainActivity.this, UpdateActivity.class);
+            startActivity(moveToaccount);
             return true;
         }
 
@@ -101,13 +150,17 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.nav_gallery) {
-            Intent moveToHis = new Intent(MainActivity.this, HistoryActivity.class);
-            startActivity(moveToHis);
+            Intent albumIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+            startActivity(albumIntent);
 
         } else if (id == R.id.nav_share) {
-
+            Intent moveToweb = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.litsy.com/"));
+            startActivity(moveToweb);
         } else if (id == R.id.nav_logout) {
+            Intent moveToexit = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(moveToexit);
             android.os.Process.killProcess(android.os.Process.myPid());
+            System.exit(0);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
