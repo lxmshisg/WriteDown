@@ -146,6 +146,22 @@ public class dbHelper extends SQLiteOpenHelper {
         contentValues.put(COl_3,pwd);
         db.update(TABLE_NAME, contentValues, "Username = ?",new String[] { user });
         return true;
+    }    
+    public boolean checkUserB(String username, String type) {
+        String[] columns = {COL_1};
+        SQLiteDatabase db = getReadableDatabase();
+        String selection = COL_2 + "=?" + " and " + COL_4 + "=?";
+        String[] selectionArgs = {username,type};
+        Cursor cursor = db.query(TABLE_NAME, columns, selection, selectionArgs, null, null, null);
+        int count = cursor.getCount();
+        cursor.close();
+        db.close();
+        if (type.equals(1))
+            return false;
+
+        else
+            return false;
+
     }
 
 
