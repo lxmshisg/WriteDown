@@ -99,9 +99,9 @@ public class MainActivity extends AppCompatActivity
             intent.setAction(Intent.ACTION_VIEW);
             intent.setDataAndType(Uri.fromFile(new File(file)), "image/jpeg");
             context.startActivity(intent);
-            Intent.createChooser(intent, "请选择软件显示");
+            Intent.createChooser(intent, "select the app");
         } catch (ActivityNotFoundException e) {
-            Toast.makeText(context, "没有可以打开图片的软件，请先下载", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "please download a app for iamge show", Toast.LENGTH_SHORT).show();
         }
     }
 

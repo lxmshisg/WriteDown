@@ -21,7 +21,7 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
-class HttpGet {
+class Http_Get {
     protected static final int SOCKET_TIMEOUT = 10000; // 10S
     protected static final String GET = "GET";
 
@@ -31,37 +31,36 @@ class HttpGet {
             SSLContext sslcontext = SSLContext.getInstance("TLS");
             sslcontext.init(null, new TrustManager[] { myX509TrustManager }, null);
 
-            String sendUrl = getUrlWithQueryString(host, params);
+            String sendtoUrl = get_Url_Query_String(host, params);
 
-            // System.out.println("URL:" + sendUrl);
 
-            URL uri = new URL(sendUrl); // create  the URL
-            HttpURLConnection conn = (HttpURLConnection) uri.openConnection();
-            if (conn instanceof HttpsURLConnection) {
-                ((HttpsURLConnection) conn).setSSLSocketFactory(sslcontext.getSocketFactory());
+            URL uri = new URL(sendtoUrl); // create  the URL
+            HttpURLConnection connection = (HttpURLConnection) uri.openConnection();
+            if (connection instanceof HttpsURLConnection) {
+                ((HttpsURLConnection) connection).setSSLSocketFactory(sslcontext.getSocketFactory());
             }
 
-            conn.setConnectTimeout(SOCKET_TIMEOUT); // set the time out
-            conn.setRequestMethod(GET);
-            int statusCode = conn.getResponseCode();
-            if (statusCode != HttpURLConnection.HTTP_OK) {
-                System.out.println("Http wrong code：" + statusCode);
+            connection.setConnectTimeout(SOCKET_TIMEOUT); // set the time out
+            connection.setRequestMethod(GET);
+            int responseCode = connection.getResponseCode();
+            if (responseCode != HttpURLConnection.HTTP_OK) {
+                System.out.println("Http wrong code：" + responseCode);
             }
 
             // read the client date
-            InputStream is = conn.getInputStream();
-            BufferedReader br = new BufferedReader(new InputStreamReader(is));
+            InputStream inputStream = connection.getInputStream();
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
             StringBuilder builder = new StringBuilder();
             String line = null;
-            while ((line = br.readLine()) != null) {
+            while ((line = bufferedReader.readLine()) != null) {
                 builder.append(line);
             }
 
             String text = builder.toString();
 
-            close(br); // close the br  date
-            close(is); // close the is date
-            conn.disconnect(); // break the connect
+            close(bufferedReader); // close the br  date
+            close(inputStream); // close the is date
+            connection.disconnect(); // break the connect
 
             return text;
         } catch (MalformedURLException e) {
@@ -77,7 +76,7 @@ class HttpGet {
         return null;
     }
 
-    public static String getUrlWithQueryString(String url, Map<String, String> params) {
+    public static String get_Url_Query_String(String url, Map<String, String> params) {
         if (params == null) {
             return url;
         }
@@ -122,7 +121,7 @@ class HttpGet {
 
     /**
      * URL encoding the input string, ie converting to %20
-     * 
+     *
      * @param input origin input
      * @return URL encoding. If the encoding fails, return to the original text
      */
